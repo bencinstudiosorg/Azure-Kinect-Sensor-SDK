@@ -2,7 +2,7 @@
   <Import Project="..\k4a.props" />
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <LangVersion>latest</LangVersion>
 
     <RunCodeAnalysis>false</RunCodeAnalysis>
