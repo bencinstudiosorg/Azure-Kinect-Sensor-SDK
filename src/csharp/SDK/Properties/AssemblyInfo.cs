@@ -7,3 +7,4 @@
 using System;
 
 [assembly: CLSCompliant(true)]
+//[assembly: InternalsVisibleToAttribute("Microsoft.Azure.Kinect.Sensor.BodyTracking")]

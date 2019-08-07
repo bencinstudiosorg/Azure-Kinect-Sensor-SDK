@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputPath Condition="'$(BaseOutputPath)' != ''">$(BaseOutputPath)\$(AssemblyName)\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>$(OutputPath)Microsoft.Azure.Kinect.Sensor.BodyTracking.xml</DocumentationFile>
+    <Description>Microsoft Azure Kinect Sensor Body Tracking SDK</Description>
+    <Company>BencinStudios</Company>
+    <Copyright>Copyright (c) Bencin Studios. All rights reserved.</Copyright>
+    <PackageLicenseExpression>Licensed under the MIT License.</PackageLicenseExpression>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\SDK\Microsoft.Azure.Kinect.Sensor.csproj" />
+  </ItemGroup>
+
+</Project>
