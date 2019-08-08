@@ -38,7 +38,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{D9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{94E07BE5-5E5C-488B-A5CD-0D7D9EBCC725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Azure.Kinect.Sensor.BodyTracking", "Body Tracking SDK\Microsoft.Azure.Kinect.Sensor.BodyTracking\Microsoft.Azure.Kinect.Sensor.BodyTracking.csproj", "{16A2F5A8-A71A-4F5C-8242-E86C633D04A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Azure.Kinect.Sensor.BodyTracking", "Body Tracking SDK\Microsoft.Azure.Kinect.Sensor.BodyTracking.csproj", "{16A2F5A8-A71A-4F5C-8242-E86C633D04A1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{847B31D5-C253-4766-BF81-032F4670589D} = {847B31D5-C253-4766-BF81-032F4670589D}
 	EndProjectSection
