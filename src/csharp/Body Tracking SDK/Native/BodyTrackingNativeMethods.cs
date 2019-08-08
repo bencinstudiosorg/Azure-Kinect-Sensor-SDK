@@ -84,13 +84,6 @@ namespace Microsoft.Azure.Kinect.Sensor.BodyTracking
         #endregion
 
         #region Structs
-
-        [NativeReference]
-        [StructLayout(LayoutKind.Sequential)]
-        public struct k4abt_skeleton_t
-        {
-            // todo fill this out
-        }
         
         #endregion
 
@@ -141,7 +134,7 @@ namespace Microsoft.Azure.Kinect.Sensor.BodyTracking
         public static extern NativeMethods.k4a_result_t k4abt_frame_get_body_skeleton(
             k4abt_frame_t body_frame_handle,
             uint index,
-            out k4abt_skeleton_t skeleton);
+            out Skeleton skeleton);
 
         [DllImport("k4abt", CallingConvention = k4aCallingConvention)]
         [NativeReference]
