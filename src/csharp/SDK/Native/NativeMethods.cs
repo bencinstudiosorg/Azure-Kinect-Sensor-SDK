@@ -14,7 +14,7 @@ namespace Microsoft.Azure.Kinect.Sensor
 {
 #pragma warning disable IDE1006 // Naming Styles
 
-    public class NativeMethods // todo: make this internal with internals visible to body tracking
+    internal class NativeMethods // todo: make this internal with internals visible to body tracking
     {
         private const CallingConvention k4aCallingConvention = CallingConvention.Cdecl;
 
