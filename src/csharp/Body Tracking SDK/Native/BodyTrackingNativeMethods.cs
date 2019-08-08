@@ -111,14 +111,14 @@ namespace Microsoft.Azure.Kinect.Sensor.BodyTracking
         public static extern NativeMethods.k4a_wait_result_t k4abt_tracker_enqueue_capture(
             k4abt_tracker_t tracker_handle,
             NativeMethods.k4a_capture_t sensor_capture_handle,
-            Int32 timeout_in_ms);
+            int timeout_in_ms);
 
         [DllImport("k4abt", CallingConvention = k4aCallingConvention)]
         [NativeReference]
         public static extern NativeMethods.k4a_wait_result_t k4abt_tracker_pop_result(
             k4abt_tracker_t tracker_handle,
             out k4abt_frame_t body_frame_handle,
-            Int32 timeout_in_ms);
+            int timeout_in_ms);
 
         [DllImport("k4abt", CallingConvention = k4aCallingConvention)]
         [NativeReference]
@@ -134,22 +134,22 @@ namespace Microsoft.Azure.Kinect.Sensor.BodyTracking
 
         [DllImport("k4abt", CallingConvention = k4aCallingConvention)]
         [NativeReference]
-        public static extern UInt64 k4abt_frame_get_num_bodies(k4abt_frame_t body_frame_handle);
+        public static extern uint k4abt_frame_get_num_bodies(k4abt_frame_t body_frame_handle);
 
         [DllImport("k4abt", CallingConvention = k4aCallingConvention)]
         [NativeReference]
         public static extern NativeMethods.k4a_result_t k4abt_frame_get_body_skeleton(
             k4abt_frame_t body_frame_handle,
-            UInt64 index,
+            uint index,
             out k4abt_skeleton_t skeleton);
 
         [DllImport("k4abt", CallingConvention = k4aCallingConvention)]
         [NativeReference]
-        public static extern UInt32 k4abt_frame_get_body_id(k4abt_frame_t body_frame_handle, UInt64 index);
+        public static extern uint k4abt_frame_get_body_id(k4abt_frame_t body_frame_handle, uint index);
 
         [DllImport("k4abt", CallingConvention = k4aCallingConvention)]
         [NativeReference]
-        public static extern UInt64 k4abt_frame_get_timestamp_usec(k4abt_frame_t body_frame_handle);
+        public static extern uint k4abt_frame_get_timestamp_usec(k4abt_frame_t body_frame_handle);
 
         [DllImport("k4abt", CallingConvention = k4aCallingConvention)]
         [NativeReference]

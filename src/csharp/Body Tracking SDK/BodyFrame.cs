@@ -1,12 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Microsoft.Azure.Kinect.Sensor.BodyTracking
 {
     public class BodyFrame : IDisposable
     {
         private BodyTrackingNativeMethods.k4abt_frame_t _handle;
+        
+        /// <summary>
+        /// Gets the number of people in this frame.
+        /// </summary>
+        public uint NumBodies
+        {
+            get
+            {
+                lock (this)
+                {
+                    if (this.disposedValue)
+                    {
+                        throw new ObjectDisposedException(nameof(BodyFrame));
+                    }
+
+                    return BodyTrackingNativeMethods.k4abt_frame_get_num_bodies(this._handle);
+                }
+            }
+        }
 
         internal BodyFrame(BodyTrackingNativeMethods.k4abt_frame_t handle)
         {
@@ -17,6 +34,8 @@ namespace Microsoft.Azure.Kinect.Sensor.BodyTracking
             this._handle = handle;
         }
         
+        
+
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls
 
